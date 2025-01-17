@@ -1,0 +1,23 @@
+﻿@model EmployeeMessagingApplication.Areas.Models.Employee
+
+<h2>Create Employee</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label for="Name">Name</label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label for="Position">Position</label>
+        <input asp-for="Position" />
+    </div>
+    <div>
+        <label for="Department">Department</label>
+        <input asp-for="Department" />
+    </div>
+    <div>
+        <label for="Salary">Salary</label>
+        <input asp-for="Salary" />
+    </div>
+    <button type="submit">Save</button>
+</form>
