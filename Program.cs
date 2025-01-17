@@ -12,7 +12,7 @@ var connectionString = builder.Configuration.GetConnectionString("AppDbContextCo
                        ?? throw new InvalidOperationException("Connection string 'AppDbContextConnection' not found.");
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(connectionString)); // Use Npgsql for PostgreSQL
+    options.UseSqlServer(connectionString)); // Use Npgsql for PostgreSQL
 
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddRoles<IdentityRole>()
