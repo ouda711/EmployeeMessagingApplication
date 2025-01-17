@@ -1,5 +1,6 @@
 using EmployeeMessagingApplication;
 using EmployeeMessagingApplication.Areas.Identity.Data;
+using EmployeeMessagingApplication.Areas.Seeds;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,6 +25,18 @@ builder.Services.AddSignalR();
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        await SeedUsers.SeedUsersAndRolesAsync(services);
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error occurred during seeding: {ex.Message}");
+    }
+}
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
