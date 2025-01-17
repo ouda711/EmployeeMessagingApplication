@@ -43,13 +43,16 @@ Testing the Application
 
         Open the application in two different browsers or in incognito/private mode.
 
-        SignUp/Login with the following credentials:
+        Login with the following credentials:
             User 1:
-                Email: user1@gmail.com
-                Password: Test@123
+                Email: employee@example.com
+                Password: P@ssw0rd!
             Manager:
-                Email: manager1@gmail.com
-                Password: Test@123
+                Email: manager@example.com
+                Password: P@ssw0rd!
+            Admin:
+                Email: admin@example.com
+                Password: P@ssw0rd!
 
     Sending Messages:
         To send a one-to-one message, type the email address of the other user in the designated field and click "Send Message."
@@ -61,5 +64,5 @@ Testing the Application
 
 Additional Notes
 
-    The password for all test users is Test@123.
+    The password for all test users is `P@ssw0rd!`
     Ensure that SignalR is properly configured and that both users can communicate without issues.
